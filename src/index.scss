@@ -9,6 +9,9 @@
   font-weight: 500;
 }
 
+p{
+  margin:0;
+}
 
 .header{
   display: flex;
@@ -31,6 +34,66 @@
 .mainContainer{
   margin-right:100px;
   margin-left: 100px;
+  .introBanner{
+    margin-top: 30px ;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    position: relative;
+    color: white;
+    border-radius: 16px;
+    background-image: url("src/assets/backGroundImage.png");
+    background-position: center;
+    background-size: cover; 
+    height: 223px;
+    overflow: hidden;
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    .introBanner__text{
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      text-align: center;
+      font-size: 48px;
+
+    }
+  }
+  .accomodationGallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #F6F6F6;
+    border-radius: 16px;
+    margin-top: 30px ;
+    margin-bottom: 30px;
+    padding: 50px;
+
+    
+    .accomodationGalleryCard{
+      display: flex;
+      flex-direction: column;
+      width: 340px;
+     
+      margin-bottom: 50px;
+
+    
+      .cardImage{
+        border-radius: 16px;
+        height: 340px;
+        object-fit: cover;
+      }
+
+    }
+  
+  
+  }
 }
 
 
@@ -44,6 +107,8 @@
   text-align: center;
   align-items: center;
   padding-top: 50px;
+  padding-bottom: 50px;
+  gap: 50px;
   img{
     width: 122px;
   }

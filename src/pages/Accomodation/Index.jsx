@@ -1,10 +1,13 @@
 import { useParams } from 'react-router-dom'
 
 
-export function Logement(){
+
+export function Accomodation(){
 const accomodationId = useParams()
 console.log(accomodationId)
     return (
-        <p>Fiche Logement numero: {accomodationId}</p>
+        <div>
+            <p>Fiche Logement numero:</p>
+        </div>
     )
 }
