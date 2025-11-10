@@ -1,15 +1,12 @@
 import { accomodationList } from "../../data/accomodationList"
 import { AccomodationGalleryCard } from "../../components/AccomodationGalleryCard/AccomodationGalleryCard"
+import { Banner } from "../../components/Banner/Banner" 
 
 
 export function Home(){
     return (
         <div>
-            <div className="introBanner">
-                <div className="introBanner__text">
-                    Chez vous, partout et ailleurs
-                </div>
-            </div>
+            <Banner bannerImg="src/assets/coast.png" bannerText="Chez vous, partout et ailleurs" />
             <div className="accomodationGallery">
             {accomodationList.map((accomodation) =>
 					 (
