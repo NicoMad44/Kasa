@@ -6,12 +6,13 @@ import { Banner } from "../../components/Banner/Banner"
 export function Home(){
     return (
         <div>
-            <Banner bannerImg="src/assets/coast.png" bannerText="Chez vous, partout et ailleurs" />
+            <Banner bannerImg="coast.png" bannerText="Chez vous, partout et ailleurs" />
             <div className="accomodationGallery">
             {accomodationList.map((accomodation) =>
 					 (
 						<div key={accomodation.id}>
 							<AccomodationGalleryCard
+                                id={accomodation.id}
 								cover={accomodation.cover}
 								title={accomodation.title}
 							/>

@@ -1,6 +1,4 @@
 
-
-
 #root {
 
   padding:0;
@@ -9,21 +7,27 @@
   font-weight: 500;
 }
 
-p{
+p, h2{
   margin:0;
 }
 
+a{
+  text-decoration: none;
+  color: black;
+}
 
 .errorPage{
   color: #FF6060;
   text-align: center;
   margin: 100px;
   .error404{
-    font-size: 228px;
+    font-size: 228px; 
   }
-  a{
-    text-decoration: none;
+  .errorText{
+    font-size: 36px;
+    margin-bottom: 100px;
   }
+ 
 }
 
 
@@ -76,12 +80,13 @@ p{
   .accomodationGallery{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     background-color: #F6F6F6;
     border-radius: 16px;
     margin-top: 30px ;
     margin-bottom: 30px;
     padding: 50px;
+    gap: 50px;
 
     
     .accomodationGalleryCard{
@@ -102,6 +107,37 @@ p{
   
   
   }
+}
+
+.cbContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+
+  .cbHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FF6060;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px 10px 15px;
+    height: 52px;
+    h2{
+      font-size: 24px;
+    }
+  }
+  .cbContent{
+    background-color: #F6F6F673;
+    border-radius: 10px 10px 5px 5px;
+    padding: 20px;
+    p{
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+  
 }
 
 

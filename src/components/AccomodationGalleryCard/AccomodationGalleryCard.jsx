@@ -1,8 +1,12 @@
-export function AccomodationGalleryCard({title, cover}){
+import { Link } from "react-router-dom"
+
+export function AccomodationGalleryCard({title, cover, id}){
     return (
-        <div className="accomodationGalleryCard">
-            <img className="cardImage" src={cover} alt={title} />
-            <p> {title}</p>
-        </div>
+        <Link to={`/logements/${id}`}>
+            <div className="accomodationGalleryCard">
+                <img className="cardImage" src={cover} alt={title} />
+                <p> {title}</p>
+            </div>
+        </Link>
     )
 }
