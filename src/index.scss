@@ -140,6 +140,27 @@ a{
   
 }
 
+.accomodationPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .slideshow{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    .slideshowNav{
+      width: 100%;
+      position: absolute;
+      display: flex;
+      justify-content: space-between;
+    }
+    .displayedImage{
+      position: relative;
+    }
+  }
+}
+
 
 
 .footer{
