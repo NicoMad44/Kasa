@@ -10,7 +10,6 @@ export function Accomodation(){
         return  <Error /> 
     }   else {
         return  <div key={accomodationId} className='accomodationPage'>
-                    {/* <img src={accomodationToDisplay.cover} alr={accomodationToDisplay.title} /> */}
                     <Slideshow pictures={accomodationToDisplay.pictures}/>
                 </div> 
     }

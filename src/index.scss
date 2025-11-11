@@ -141,22 +141,30 @@ a{
 }
 
 .accomodationPage{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
   .slideshow{
-    display: flex;
-    align-items: center;
-    background-color: black;
-    .slideshowNav{
-      width: 100%;
+    position: relative;
+    margin: auto;   
+    height: 800px;
+    overflow: hidden; 
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 25px;
+    .slideshowNav{ 
       position: absolute;
+      top: 40%;
+      left: 0;
+      width: 100%;
       display: flex;
       justify-content: space-between;
+      align-items: center;
     }
     .displayedImage{
       position: relative;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 25px;
+      
     }
   }
 }

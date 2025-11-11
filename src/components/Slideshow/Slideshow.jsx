@@ -1,16 +1,38 @@
-import arrowLeft from "src/assets/arrowLeft.png";
-import arrowRight from "src/assets/arrowRight.png";
-export function Slideshow(){
-    
+import { useState } from "react";
+
+export function Slideshow({pictures}){
+    console.log(pictures)
+    const [index, setIndex] = useState(0)
+
+    function clickNext(){
+        if (index<pictures.length-1) {
+            setIndex(index+1)
+        } else {
+            setIndex(0)
+        }
+    }
+
+    function clickPrev(){
+        if (index>0) {
+            setIndex(index-1)
+        } else {
+            setIndex(pictures.length-1)
+        }
+    }
+
 
     return (
+        pictures.length>1 ? 
     <div className="slideshow">
-        
-        <img className="displayedImage" src="https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg" alt="photo du logement"/>
+        <img className="displayedImage" src={pictures[index]} alt="photo du logement"/>
         <div className="slideshowNav">
-            <img src={arrowLeft} alt="button to see the previous picture" /> 
-            <img src={arrowRight} alt="button to see the next picture"/>
+            <img src={"/src/assets/arrowLeft.png"} alt="button to see the previous picture" onClick={clickPrev}/> 
+            <img src={"/src/assets/arrowRight.png"} alt="button to see the next picture" onClick={clickNext}/>
         </div>
+    </div>
+    :
+    <div className="slideshow">
+        <img className="displayedImage" src={pictures[index]} alt="photo du logement"/>
     </div>
     )
 }
