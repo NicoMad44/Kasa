@@ -5,6 +5,10 @@
   font-family: 'Montserrat';
   font-size: 24px;
   font-weight: 500;
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 }
 
 p, h2, ul{
@@ -24,15 +28,21 @@ a{
 .errorPage{
   color: #FF6060;
   text-align: center;
-  margin: 100px;
+  margin-top:100px;
+  margin-bottom:100px;
   .error404{
-    font-size: 228px; 
+    font-size: 228px;
+    @media (max-width: 600px) {
+      font-size:96px;
+    } 
   }
   .errorText{
     font-size: 36px;
     margin-bottom: 100px;
+    @media (max-width: 600px) {
+      font-size:18px;
+    } 
   }
- 
 }
 
 
@@ -47,10 +57,23 @@ a{
     flex-direction: row;
     list-style: none;
     gap: 57px;
+    @media (max-width: 600px) {
+      gap:15px;
+    }
     a{
     text-decoration: none;
     color: black;
     }
+  }
+  img{
+    width:210px;
+    @media (max-width: 600px) {
+      width: 150px;
+    }
+  }
+  @media (max-width: 600px) {
+    margin-left: 15px;
+    margin-right:15px;
   }
 }
 
@@ -61,13 +84,15 @@ a{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 30px ;
-    margin-bottom: 30px;
+ 
     border: 1px solid black;
     position: relative;
     border-radius: 16px;
     height: 223px;
     overflow: hidden;
+    @media (max-width: 600px) {
+      height: 111px;
+    }
     .banner__text{
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -75,11 +100,15 @@ a{
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100%;
       text-align: center;
       font-size: 48px;
       color:white;
       background-color: rgba(0, 0, 0, 0.6);
+      padding: 15px;
+      @media (max-width: 600px) {
+        font-size: 24px;
+        text-align: left;
+      }
     }
   }
   .accomodationGallery{
@@ -92,25 +121,42 @@ a{
     margin-bottom: 30px;
     padding: 50px;
     gap: 50px;
-
-    
+    @media (max-width: 600px) {
+      padding: 20px;
+      gap: 20px;
+      background-color: white;
+    }
     .accomodationGalleryCard{
       display: flex;
       flex-direction: column;
       width: 340px;
-     
-      margin-bottom: 50px;
-
-    
+      @media (max-width: 600px) {
+        width: 335px;
+      }
       .cardImage{
         border-radius: 16px;
         height: 255px;
         object-fit: cover;
       }
-
+      .photoSubTitle{
+        margin-left: 20px;
+        width: 45%;
+      }
     }
-  
-  
+  }
+  @media (max-width: 600px) {
+    margin-left: 15px;
+    margin-right:15px;
+  }
+}
+
+.aProposMain{
+  margin-top: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
+  @media (max-width: 600px) {
+    padding: 0;
+    margin-top: 15px;
   }
 }
 
@@ -118,6 +164,9 @@ a{
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
+  @media (max-width: 600px) {
+    margin-bottom: 10px;
+  }
 
   .cbHeader{
     display: flex;
@@ -127,9 +176,16 @@ a{
     color: white;
     border-radius: 5px;
     padding: 10px 20px 10px 15px;
-    height: 52px;
+    height: 42px;
     h2{
-      font-size: 24px;
+      font-size: 18px;
+      font-weight: 700;
+      @media (max-width: 600px) {
+        font-size: 13px;
+      }
+    }
+    @media (max-width: 600px) {
+      height: 22px;
     }
   }
   .cbContent{
@@ -140,6 +196,10 @@ a{
       font-size: 18px;
       font-weight: 500;
       list-style: none;
+      @media (max-width: 600px) {
+        font-size: 12px;
+        font-weight: 400;
+      }
     }
   }
   
@@ -156,6 +216,10 @@ a{
     margin-top: 50px;
     margin-bottom: 50px;
     border-radius: 25px;
+    @media (max-width: 600px) {
+      height: 255px;
+      margin-bottom: 20px;
+    }
     .slideshowNav{ 
       position: absolute;
       top: 0;
@@ -165,14 +229,21 @@ a{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      .slideShowCounter{
+      .slideshowArrow{
+        @media (max-width: 600px) {
+          width: 24px;
+        }
+      }
+      .slideshowCounter{
         display: inline-flex;
         align-items: flex-end;
         color: #F6F6F6;
         font-size: 18px;
         height: inherit;
         padding-bottom: 50px;
-
+        @media (max-width: 600px) {
+          display: none;
+        }
       }
     }
     .displayedImage{
@@ -181,6 +252,10 @@ a{
       height: 450px;
       object-fit: cover;
       border-radius: 25px;
+      @media (max-width: 600px) {
+        height: 255px;
+        border-radius: 10px;
+      }
     }
   }
 
@@ -189,35 +264,55 @@ a{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
-    h2{
-      color: #FF6060;
-      font-size: 36px;
-      font-weight: 500;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      margin-bottom: 0px;
     }
-    p{
-      font-size: 18px;
-      
+    .accomodationKeyInfo--Title{
+      align-self: flex-start;
+      h2{
+        color: #FF6060;
+        font-size: 36px;
+        font-weight: 500;
+        @media (max-width: 600px) {
+          font-size: 18px;
+        }
+      }
+      p{
+        font-size: 18px;
+        @media (max-width: 600px) {
+          font-size: 14px;
+        }
+      }
     }
     .hostInfo{
       display: flex;
       align-items: center;
       gap: 10px;
-      
+      align-self: flex-end;
       img {
         border-radius: 100%;
         width: 64px;
       }
       .hostName{
-        width: 100px;
+        width: 50%;
         text-align: right;
+        @media (max-width: 600px) {
+          font-size: 12px;
+        }
       }
     }
-    }
+  }
 
   .accomodationKPI{
     margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
+    @media (max-width: 600px) {
+      flex-direction: column-reverse;
+      margin-bottom: 20px;
+      margin-top: -45px;
+    }
     .accomodationTags{
       display: flex;
       gap: 10px;
@@ -235,27 +330,37 @@ a{
         justify-content: center;
         align-items: center;
         padding: 5px;
+        @media (max-width: 600px) {
+          width: 84px;
+          font-size: 10px;
+          height: 18px;
+        }
       }
     }
     .star{
       margin-right: 10px;
-
+      @media (max-width: 600px) {
+        width: 18px;
+        margin-bottom: 50px;
+      }
     }
   }
 
   .accomodationDetails{
     display: flex;
     gap: 80px;
+    @media (max-width: 600px) {
+      flex-direction: column;
+      gap: 10px
+    }
     .cbContainer{
       width: 50%;
+      @media (max-width: 600px) {
+        width: 100%;
+      }
     }
   }
-
-
 }
-
-
-
 
 .footer{
   display: flex;
@@ -268,88 +373,11 @@ a{
   padding-top: 50px;
   padding-bottom: 50px;
   gap: 50px;
+  @media (max-width: 600px) {
+    padding-left:120px;
+    padding-right: 120px;
+  }
   img{
     width: 122px;
   }
 }
-
-
-
-
-
-/* :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-
-li{
-  list-style: none;
-}
-
-
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
- */

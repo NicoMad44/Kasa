@@ -13,7 +13,7 @@ export function APropos(){
     return (
         <div>
             <Banner bannerImg="montaines.png" bannerText="" />
-            <div className="cbContainer">
+            <div className="aProposMain">
                 {contentBoxes}
             </div>
         </div>

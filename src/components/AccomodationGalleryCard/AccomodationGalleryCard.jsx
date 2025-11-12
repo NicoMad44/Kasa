@@ -5,7 +5,7 @@ export function AccomodationGalleryCard({title, cover, id}){
         <Link to={`/logements/${id}`}>
             <div className="accomodationGalleryCard">
                 <img className="cardImage" src={cover} alt={title} />
-                <p> {title}</p>
+                <p className="photoSubTitle"> {title}</p>
             </div>
         </Link>
     )
