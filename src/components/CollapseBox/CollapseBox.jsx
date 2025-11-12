@@ -7,7 +7,7 @@ export function CollapseBox({title, content}){
     const [isOpenStatus, SetIsOpenStatus] = useState(false);
 
     return (
-        <div>
+        <div className="cbContainer">
             <CBHeader title={title} isOpenStatus={isOpenStatus} SetIsOpenStatus={SetIsOpenStatus}/>
             <div 
             style={{
@@ -15,7 +15,7 @@ export function CollapseBox({title, content}){
                 transition: 'max-height 0.5s ease',  
                 maxHeight: isOpenStatus ? '500px' : '0px',
                 overflow: 'hidden',
-            }}
+            }} 
             >
                 <CBContent isOpenStatus={isOpenStatus} content={content}/>
             </div>

@@ -2,6 +2,11 @@ import { useParams } from 'react-router-dom'
 import { accomodationList } from '../../data/accomodationList'
 import { Error } from '../../components/Error/Error';
 import { Slideshow } from '../../components/Slideshow/Slideshow';
+import { AccomodationTitle } from '../../components/AccomodationTitle/AccomodationTitle';
+import { HostInfo } from '../../components/HostInfo/HostInfo'; 
+import { AccomodationTags } from '../../components/AccomodationTags/AccomodationTags'; 
+import { AccomodationRating } from '../../components/AccomodationRating/AccomodationRating';
+import { CollapseBox } from '../../components/CollapseBox/CollapseBox';
 
 export function Accomodation(){
     const {accomodationId} = useParams()
@@ -11,6 +16,19 @@ export function Accomodation(){
     }   else {
         return  <div key={accomodationId} className='accomodationPage'>
                     <Slideshow pictures={accomodationToDisplay.pictures}/>
+                    <div className='accomodationKeyInfo'>
+                        <AccomodationTitle accomodationTitle={accomodationToDisplay.title} accomodationLocation={accomodationToDisplay.location} />
+                        <HostInfo hostName={accomodationToDisplay.host.name} hostPicture={accomodationToDisplay.host.picture}/>
+                    </div>
+                    <div className='accomodationKPI'>
+                        <AccomodationTags accomodationTags={accomodationToDisplay.tags} />
+                        <AccomodationRating accomodationNbStars={accomodationToDisplay.rating}/>
+                    </div>
+                    <div className='accomodationDetails'>
+                        <CollapseBox title="Description" content={accomodationToDisplay.description} />
+                        <CollapseBox title="Équipements" content={accomodationToDisplay.equipments} />
+                    </div>
+
                 </div> 
     }
 }

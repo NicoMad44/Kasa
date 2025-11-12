@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export function Slideshow({pictures}){
-    console.log(pictures)
     const [index, setIndex] = useState(0)
 
     function clickNext(){

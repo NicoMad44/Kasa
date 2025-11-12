@@ -1,9 +1,9 @@
+import arrow from "../../assets/arrowUp.png"
 
 
 export function CBHeader({isOpenStatus, title, SetIsOpenStatus}){
 
     function handleClick(){
-        console.log("click detected and function launched")
         if(isOpenStatus){
             SetIsOpenStatus(false)
         } else {
@@ -23,7 +23,7 @@ export function CBHeader({isOpenStatus, title, SetIsOpenStatus}){
                 transform: isOpenStatus ? 'rotate(-180deg)' : 'rotate(0deg)'
             }}
             >
-                <img src="src/assets/arrowUp.png" alt="boutton pour ouvrir ou fermer la modal montrant"/>
+                <img src={arrow} alt="boutton pour ouvrir ou fermer la modal montrant"/>
             </div>
         </div>
     )
