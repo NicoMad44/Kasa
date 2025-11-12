@@ -1,13 +1,32 @@
 import { Link } from "react-router-dom"
-export function Navigation(){
+import { useState } from "react"
 
+export function Navigation(){
+    const [activePath, setActivePath] = useState('/');
+    
     return(
        <nav className="navbar"> 
             <ul>
-                <li> <Link to="/"> Acceuil </Link> </li>
-                <li> <Link to="/APropos"> A Propos </Link> </li>
-            </ul>
+                <li> <Link 
+                    to="/"
+                    onClick={()=> setActivePath("/")}
+                    style={{
+                        textDecoration: activePath === "/" ? "underline" : "none"
+                    }}
+                    >
+                        Accueil 
+                </Link> </li>
 
+                <li> <Link
+                    to="/APropos"
+                    onClick={()=> setActivePath("/APropos")}
+                    style={{
+                        textDecoration: activePath === "/APropos" ? "underline" : "none"
+                    }}
+                    >
+                        A Propos 
+                </Link> </li>
+            </ul>
        </nav>
     )
 
