@@ -158,12 +158,22 @@ a{
     border-radius: 25px;
     .slideshowNav{ 
       position: absolute;
-      top: 40%;
+      top: 0;
       left: 0;
       width: 100%;
+      height: inherit;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      .slideShowCounter{
+        display: inline-flex;
+        align-items: flex-end;
+        color: #F6F6F6;
+        font-size: 18px;
+        height: inherit;
+        padding-bottom: 50px;
+
+      }
     }
     .displayedImage{
       position: relative;
