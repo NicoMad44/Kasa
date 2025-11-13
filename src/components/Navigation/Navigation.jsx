@@ -1,17 +1,38 @@
 import { Link } from "react-router-dom"
-import { useState } from "react"
+import { useState, useEffect } from "react" 
+import { useLocation } from "react-router-dom"
 
 export function Navigation(){
-    const [activePath, setActivePath] = useState('/');
+    const location = useLocation()
+    const [activePath, setActivePath] = useState(location.pathname)
+    const [linkStyleHome, setLinkStyleHome] = useState("underline")
+    const [linkStyleAPropos, setLinkStyleAPropos] = useState("none")
+    console.log(linkStyleHome)
+    useEffect(() => {
+        setActivePath(location.pathname)
+        switch (activePath) {
+            case "/":
+                setLinkStyleHome("underline");
+                setLinkStyleAPropos("none");
+                break;
+            case "/APropos":
+                setLinkStyleHome("none");
+                setLinkStyleAPropos("underline");
+                break;
+            default:
+                setLinkStyleHome("none");
+                setLinkStyleAPropos("none");;
+        }
+    }, [activePath, location.pathname])
+    
     
     return(
        <nav className="navbar"> 
             <ul>
                 <li> <Link 
                     to="/"
-                    onClick={()=> setActivePath("/")}
                     style={{
-                        textDecoration: activePath === "/" ? "underline" : "none"
+                        textDecoration: linkStyleHome
                     }}
                     >
                         Accueil 
@@ -19,9 +40,8 @@ export function Navigation(){
 
                 <li> <Link
                     to="/APropos"
-                    onClick={()=> setActivePath("/APropos")}
                     style={{
-                        textDecoration: activePath === "/APropos" ? "underline" : "none"
+                        textDecoration: linkStyleAPropos
                     }}
                     >
                         A Propos 
