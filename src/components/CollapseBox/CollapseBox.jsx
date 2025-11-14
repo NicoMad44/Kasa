@@ -17,7 +17,7 @@ export function CollapseBox({title, content}){
                 overflow: 'hidden',
             }} 
             >
-                <CBContent isOpenStatus={isOpenStatus} content={content}/>
+                <CBContent content={content}/>
             </div>
         </div>
     )
