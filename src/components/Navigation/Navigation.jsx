@@ -7,7 +7,6 @@ export function Navigation(){
     const [activePath, setActivePath] = useState(location.pathname)
     const [linkStyleHome, setLinkStyleHome] = useState("underline")
     const [linkStyleAPropos, setLinkStyleAPropos] = useState("none")
-    console.log(linkStyleHome)
     useEffect(() => {
         setActivePath(location.pathname)
         switch (activePath) {
