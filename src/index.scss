@@ -51,7 +51,7 @@ a{
 }
 
 
-.header{
+header{
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,6 +68,9 @@ a{
     a{
     text-decoration: none;
     color: black;
+    @media (max-width: $maxWidth) {
+      text-transform: uppercase;
+    }
     }
   }
   img{
@@ -82,14 +85,13 @@ a{
   }
 }
 
-.mainContainer{
+main{
   margin-right:100px;
   margin-left: 100px;
   .banner{
     display: flex;
     flex-direction: column;
     justify-content: center;
- 
     border: 1px solid black;
     position: relative;
     border-radius: 16px;
@@ -127,7 +129,7 @@ a{
     padding: 50px;
     gap: 50px;
     @media (max-width: $maxWidth) {
-      padding: 20px;
+      padding: 0px;
       gap: 20px;
       background-color: white;
     }
@@ -144,6 +146,9 @@ a{
         border-radius: 16px;
         height: 340px;
         object-fit: cover;
+        @media (max-width: $maxWidth) {
+          height: 255px;
+        }
       }
       .photoSubTitle{
         margin-left: 20px;
@@ -215,7 +220,6 @@ a{
       }
     }
   }
-  
 }
 
 .accomodationPage{
@@ -250,7 +254,7 @@ a{
       .slideshowCounter{
         display: inline-flex;
         align-items: flex-end;
-        color: #F6F6F6;
+        color: $backgroundColor;
         font-size: 18px;
         height: inherit;
         padding-bottom: 50px;
@@ -358,7 +362,6 @@ a{
       }
     }
   }
-
   .accomodationDetails{
     display: flex;
     gap: 80px;
@@ -375,7 +378,7 @@ a{
   }
 }
 
-.footer{
+footer{
   display: flex;
   flex-direction: column;
   justify-content: center;

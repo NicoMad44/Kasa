@@ -9,16 +9,13 @@ export function Home(){
             <Banner bannerImg="coast.png" bannerText="Chez vous, partout et ailleurs" />
             <div className="accomodationGallery">
             {accomodationList.map((accomodation) =>
-					 (
-					
-							<AccomodationGalleryCard
-                                key={accomodation.id}
-                                id={accomodation.id}
-								cover={accomodation.cover}
-								title={accomodation.title}
-							/>
-					
-					)
+					 (<AccomodationGalleryCard
+                        key={accomodation.id}
+                        id={accomodation.id}
+                        cover={accomodation.cover}
+                        title={accomodation.title}
+                        />
+                    )
 				)}
             </div>
         </div>
