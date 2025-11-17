@@ -134,18 +134,26 @@ a{
     .accomodationGalleryCard{
       display: flex;
       flex-direction: column;
-      width: 340px;
+      width: 30%;
+      min-width: 340px;
+      position: relative;
       @media (max-width: $maxWidth) {
-        width: 335px;
+        width: 100%;
       }
       .cardImage{
         border-radius: 16px;
-        height: 255px;
+        height: 340px;
         object-fit: cover;
       }
       .photoSubTitle{
         margin-left: 20px;
-        width: 45%;
+        width: 80%;
+        position: absolute;
+        bottom: 10px;
+        color: white;
+        background: rgba(30, 30, 30, 0.30);
+        border-radius: 16px;
+        padding: 10px;
       }
     }
   }

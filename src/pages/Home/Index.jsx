@@ -10,13 +10,14 @@ export function Home(){
             <div className="accomodationGallery">
             {accomodationList.map((accomodation) =>
 					 (
-						<div key={accomodation.id}>
+					
 							<AccomodationGalleryCard
+                                key={accomodation.id}
                                 id={accomodation.id}
 								cover={accomodation.cover}
 								title={accomodation.title}
 							/>
-						</div>
+					
 					)
 				)}
             </div>
