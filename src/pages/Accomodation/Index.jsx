@@ -22,18 +22,6 @@ export function Accomodation(){
                         <AccomodationTags accomodationTags={accomodationToDisplay.tags} />
                         <AccomodationRating accomodationNbStars={accomodationToDisplay.rating}/>
                     </div>
-
-
-
-
-                    {/* <div className='accomodationKeyInfo'>
-                        <AccomodationTitle accomodationTitle={accomodationToDisplay.title} accomodationLocation={accomodationToDisplay.location} />
-                        <HostInfo hostName={accomodationToDisplay.host.name} hostPicture={accomodationToDisplay.host.picture}/>
-                    </div>
-                    <div className='accomodationKPI'>
-                        <AccomodationTags accomodationTags={accomodationToDisplay.tags} />
-                        <AccomodationRating accomodationNbStars={accomodationToDisplay.rating}/>
-                    </div> */}
                     <div className='accomodationDetails'>
                         <CollapseBox title="Description" content={accomodationToDisplay.description} />
                         <CollapseBox title="Équipements" content={accomodationToDisplay.equipments} />

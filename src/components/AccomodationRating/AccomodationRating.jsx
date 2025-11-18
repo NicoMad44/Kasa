@@ -2,8 +2,6 @@ import starFull from "../../assets/starFull.png"
 import starVide from "../../assets/starVide.png"
 
 
-
-
 export function AccomodationRating({accomodationNbStars}){
     const stars = [];
 
