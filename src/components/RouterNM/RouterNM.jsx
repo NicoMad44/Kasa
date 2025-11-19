@@ -3,8 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Home } from '../../pages/Home/Index'
 import { Accomodation } from '../../pages/Accomodation/Index'
 import { APropos } from '../../pages/APropos/Index'
-
-import { Error } from '../Error/Error'
+import { Error } from '../../pages/Error/Index'
 
 export function RouterNM(){
     return (

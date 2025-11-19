@@ -1,6 +1,6 @@
 import { useParams } from 'react-router-dom'
 import { accomodationList } from '../../data/accomodationList'
-import { Error } from '../../components/Error/Error';
+import { Error } from '../Error/Index';
 import { Slideshow } from '../../components/Slideshow/Slideshow';
 import { AccomodationTitle } from '../../components/AccomodationTitle/AccomodationTitle';
 import { HostInfo } from '../../components/HostInfo/HostInfo'; 
