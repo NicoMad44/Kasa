@@ -25,9 +25,9 @@ export function Slideshow({pictures}){
     <div className="slideshow">
         <img className="displayedImage" src={pictures[index]} alt="photo du logement"/>
         <div className="slideshowNav">
-            <img className="slideshowArrow" src={"/src/assets/arrowLeft.png"} alt="button to see the previous picture" onClick={clickPrev}/> 
+            <img className="slideshowArrow" src={"/Kasa/arrowLeft.png"} alt="button to see the previous picture" onClick={clickPrev}/> 
             <span className="slideshowCounter">{index+1}/{pictures.length}</span>
-            <img className="slideshowArrow" src={"/src/assets/arrowRight.png"} alt="button to see the next picture" onClick={clickNext}/>
+            <img className="slideshowArrow" src={"/Kasa/arrowRight.png"} alt="button to see the next picture" onClick={clickNext}/>
         </div>
     </div>
     :

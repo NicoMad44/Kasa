@@ -4,6 +4,7 @@ import { aProposContent } from "../../data/aProposContent"
 
 
 
+
 export function APropos(){
 
     const contentBoxes = aProposContent.map((cBox)=>
